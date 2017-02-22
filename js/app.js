@@ -23,7 +23,7 @@ var pageSearchApp = {
 		}
 		else{
 			pagesContainer.innerHTML="<pre>\
-										<h1>Ahhh...! You forgot to enter the page!!!</h1>\
+										<h1>Oops...! You forgot to enter the page!!!</h1>\
 										<h1>Please enter the page to be searched...</h1>\
 									</pre>";
 		}
