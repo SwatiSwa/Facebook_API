@@ -33,6 +33,11 @@ li a:hover:not(.active) {
     background-color: #111;
 }
 
+h1 {
+    color: #3b5998;
+    font-family: sans-serif;
+}
+
 .active {
     background-color: #3b5998;
 }
