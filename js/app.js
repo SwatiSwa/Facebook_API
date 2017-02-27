@@ -66,22 +66,27 @@
 				containerDom     = document.getElementById(container),
 				pictureURL, dom = "";
 
-			response.forEach(function(resultData){
+			if(response.length){
+				response.forEach(function(resultData){
 	      		var card = "";
-		      	card+="<div class='card' pageId="+resultData.id+" onclick='pageSearchApp.onClickCard(this,event)'>";
-	      		card+="<div id='imgDiv'><img src='" + resultData.picture.data.url + "'></div>";
-	      		card+="<div class='card-body'>";
-	      		card+="<h4><b>"+resultData.name+"</b></h4>";
-	      		card+="<p>";
-	      		if(container!=="favouriteContainer"){
-	      			card+="<i id='star' class='fa fa-star fa-1x zero-star' onclick='pageSearchApp.onClickFav(this,event)'></i>";	
-	      		}
-	      		card+=resultData.category+"</p>";
-	      		card+="</div>";
-	      		card+="<span class='tooltiptext'>"+resultData.name+"</span>";
-		      	card+="</div>";
-	      		dom+=card;
-	      	});
+			      	card+="<div class='card' pageId="+resultData.id+" onclick='pageSearchApp.onClickCard(this,event)'>";
+		      		card+="<div id='imgDiv'><img src='" + resultData.picture.data.url + "'></div>";
+		      		card+="<div class='card-body'>";
+		      		card+="<h4><b>"+resultData.name+"</b></h4>";
+		      		card+="<p>";
+		      		if(container!=="favouriteContainer"){
+		      			card+="<i id='star' class='fa fa-star fa-1x zero-star' onclick='pageSearchApp.onClickFav(this,event)'></i>";	
+		      		}
+		      		card+=resultData.category+"</p>";
+		      		card+="</div>";
+		      		card+="<span class='tooltiptext'>"+resultData.name+"</span>";
+			      	card+="</div>";
+		      		dom+=card;
+		      	});
+			}
+			else if(container=="favouriteContainer"){
+				dom = "<h1>No favourites available!!!</h1>"
+			}
 	      	containerDom.innerHTML = dom;
 		},
 		buildPageNotFoundDom : function(container){
