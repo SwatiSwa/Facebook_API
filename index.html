@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Facebook Page Search</title>
+  <script src="js/fontAwesome.js"></script>
 	<link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -20,7 +21,19 @@
 		<section class="page-section">
 			<input id="searchBox" type="search" name="search" placeholder="Search for your pages..." onsearch="pageSearchApp.onSearchFieldEnter()">
 			<p class="loader">Loading...</p>
-			<div id="pagesContainer"></div>
+			<hr/>
+			<div class="tab">
+			  <a href="javascript:void(0)" class="tablinks" onclick="pageSearchApp.openPage(event, 'pagesContainer')">All Pages</a>
+			  <a href="javascript:void(0)" class="tablinks" onclick="pageSearchApp.openPage(event, 'favouriteContainer')">Favourite Pages</a>
+			</div>
+
+			<div id="pagesContainer" class="tabcontent">
+			 
+			</div>
+
+			<div id="favouriteContainer" class="tabcontent">
+			</div>
+
 		</section>
 	</div>
 	<!--Loading the Javascript code after body loaded for performance reasons-->
