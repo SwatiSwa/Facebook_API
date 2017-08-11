@@ -13,7 +13,7 @@ var pageSearchApp = {
 			searchField    = document.getElementById("searchBox"),
 			pagesContainer = document.getElementById("pagesContainer"),
 			apiUrl         = "https://graph.facebook.com/v2.8/search?q=",
-			access_token   = "EAAaMGUNe4XUBAKrKd1wG1dO6gGF2pzMzQn7em0hDXTaZC6EDtZAKiwEXF8Ydfo5neePB9jEDknflZBEYyE95xAQaVEWqRpU3CZAkNTiiEhRuV4ixR7eF31166fQ6KgIluRB3CAwG5iDBIh4KojlNggCeJ5is0E4ZD";
+			access_token   = "EAACEdEose0cBAC1hBRKZCLHfQgIt8pIBhe5KHZBPItbElXmZBSARi7Rs7QfPGqzmYZAJg2ZB6AqK6xLCVN4kS0lz6fZCiBN4rtU04s2ZCXB1fng1CD2N0ALZCqKxxktDkfhio5X5db4YH6SsueYtxVMNyZCKzJoPJJx1TRIh0RH96EIrGYdje73Yi445GDIeZAGZCsPam8TZBJ140wZDZD";
 
 		if(searchField.value!=""){
 			pagesContainer.innerHTML = "";
