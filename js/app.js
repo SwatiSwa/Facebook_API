@@ -13,8 +13,8 @@ var pageSearchApp = {
 			searchField    = document.getElementById("searchBox"),
 			pagesContainer = document.getElementById("pagesContainer"),
 			apiUrl         = "https://graph.facebook.com/v2.8/search?q=",
-			access_token   = "EAACEdEose0cBAC1hBRKZCLHfQgIt8pIBhe5KHZBPItbElXmZBSARi7Rs7QfPGqzmYZAJg2ZB6AqK6xLCVN4kS0lz6fZCiBN4rtU04s2ZCXB1fng1CD2N0ALZCqKxxktDkfhio5X5db4YH6SsueYtxVMNyZCKzJoPJJx1TRIh0RH96EIrGYdje73Yi445GDIeZAGZCsPam8TZBJ140wZDZD";
-
+			access_token   = "EAACEdEose0cBAMRZAtZCO3W782fHXayQSrxt78B2lTHQX6NOkpbEbDamtT3H7DmcCWJFA9ZCgZBaK5rvxMSHOnZCFNB2LNhBfZA8ZBIYbGqQzXvVRLfkEyEwJb7kzHrXGiXe4eTiKw2u2pLu6IGnsLCG7BLdNPSTJ2wxXyvshOtDG6ZAyYBdSGjd6zecBe2r7i9j65xSEChUhQZDZD";
+							  
 		if(searchField.value!=""){
 			pagesContainer.innerHTML = "";
 			apiUrl = apiUrl+searchField.value+"&type=page&limit=25&fields=id,name,about,category,company_overview,bio,picture,overall_star_rating&access_token="+access_token;
